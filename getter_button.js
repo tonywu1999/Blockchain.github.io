@@ -63,7 +63,7 @@ function safety(emailAddress, doctor) {
   "To: " + emailAddress + "\r\n" +
   "Subject: IMPORTANT: PROVIDED INFO TO " + doctor + "\r\n\r\n" +
   "We were just notified that you shared your information with another doctor, " +
-    doctor + " Please take note.  Thank you.";
+    doctor + ". Please take note.  Thank you.";
 
 
   // The body needs to be base64url encoded.
