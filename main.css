@@ -1,4 +1,29 @@
-h1 {
+.input {
+    font-family: Calibri, serif;
+    position: relative;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
+    margin-bottom: 2px;
+    /*
+    margin-left: 5%;
+    margin-bottom: 5px;*/
+}
 
-    color: orange;
+.textbox {
+    position: relative;
+    text-align: center;
+    font-size: 1em;
+    height: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    /*
+
+    margin-top: 5px;
+    margin-left: 25%;*/
+}
+
+#link {
+    margin-left: 0px;
 }

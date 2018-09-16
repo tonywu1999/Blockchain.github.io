@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="main2.css">
-<title>Info Request Form</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Info Request Form</title>
 </head>
 <body>
 
-<h1>Drug Form</h1>
-<a href="Something.html"> Order Drug With Doctor </a>
+<h1 class="input"> Gathering Info </h1>
 <form>
-    Patient ID:<br>
-    <input type="text" name="Patient ID"><br>
-    Patient Name: <br>
-    <input type="text" name="Patient Name"><br>
-    Doctor ID: <br>
-    <input type="text" name="Doctor ID"><br>
+    <p class="input" > Patient ID </p>
+    <br>
+    <input class="textbox" type="text" name="Drug"><br>
+    <p class="input"> Patient Name </p>
+    <br>
+    <input class="textbox" type="text" name="Doctor"><br>
+    <p class="input"> Doctor Name </p>
+    <br>
+    <input class="textbox" type="text" name="Patient"><br>
 </form>
-<button id="send_button"> Send Patient Data </button>
-<div id="send_button_container"></div>
-<p id="Intro"> Thanks for filling out the form.</p>
+<button id="send_button" class="textbox"> Send Patient Data </button>
+<button id="authorize_button" class="textbox" style="display: none;">Authorize</button>
+<button id="signout_button" class="textbox" style="display: none;">Sign Out</button>
+<p id="Intro" class="input" style="text-decoration: none;"></p>
+<br>
+<p class="textbox"> Thanks for filling out the form, click
+    <a id="link" href="index.html">
+      here
+    </a>
+    to record to ordering drugs with a doctor.
+</p>
 <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
 <script src="getter_button.js"></script>
+<script src="gmailGetter.js"></script>
+<pre id="content"></pre>
+<script async defer src="https://apis.google.com/js/api.js"
+  onload="this.onload=function(){};handleClientLoad()"
+  onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+<!-- converts emails to base64 -->
+<script src="node_modules/js-base64/base64.js"></script>
 </body>
 </html>

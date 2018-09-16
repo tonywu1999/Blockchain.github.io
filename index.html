@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Doctor/Patient Transactions</title>
+  </head>
+  <body>
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <h1 class="input">Add a Transaction:</h1>
+    <form>
+        <p class="input"> Drug </p>
+        <br>
+        <input class="textbox" type="text" name="Drug"><br>
+        <p class="input"> Doctor </p>
+        <br>
+        <input class="textbox" type="text" name="Doctor"><br>
+        <p class="input"> Patient </p>
+        <br>
+        <input class="textbox" type="text" name="Patient"><br>
+        <p class="input"> Email </p>
+        <br>
+        <input class="textbox" type="text" name="Email"><br>
+    </form>
+    <button id="my_button" class="textbox"> Add Transaction </button>
+    <button id="authorize_button" class="textbox" style="display: none;">Authorize</button>
+    <button id="signout_button" class="textbox" style="display: none;">Sign Out</button>
+    <p id="Intro" class="input" style="display: none; text-decoration: none;"></p>
+    <br>
+    <p class="textbox"> Thanks for filling out the form, click
+      <a id="link" href="Getter.html">
+        here
+      </a>
+      to share your history with a doctor.
+    </p>
+    <!-- I have no clue what this is either -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <!-- this appends to the database -->
+    <script src="like_button.js"></script>
+    <!-- gmail login -->
+    <script src='gmail.js'></script>
+    <pre id="content"></pre>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    <!-- converts emails to base64 -->
+    <script src="node_modules/js-base64/base64.js"></script>
+    <!-- -->
+  </body>
+</html>
